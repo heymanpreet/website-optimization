@@ -477,10 +477,10 @@ var resizePizzas = function(size) {
             newwidth[i] = (randomPizzaContainer[i].offsetWidth + dx) + 'px';
         }
         //To stop repainting again and again by browser
-        for (var i = 0; i < ContainerLength; i++) {
-            randomPizzaContainer[i].style.width = newwidth[i];
+        for (var j = 0; j < ContainerLength; j++) {
+            randomPizzaContainer[j].style.width = newwidth[j];
         }
-    };
+    }
 
     changePizzaSizes(size);
 
