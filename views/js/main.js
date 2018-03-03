@@ -469,12 +469,12 @@ var resizePizzas = function(size) {
         var randomPizzaContainer = document.getElementsByClassName("randomPizzaContainer");
         var newwidth = [];
         for (var i = 0; i < ContainerLength; i++) {
-            var dx = determineDx(randomPizzaContainer[i], size);
-            newwidth[i] = (randomPizzaContainer[i].offsetWidth + dx) + 'px';
+            var dx = determineDx(randomPizzaContainer[0], size);
+            newwidth[i] = (randomPizzaContainer[0].offsetWidth + dx) + 'px';
         }
         //To stop repainting again and again by browser
         for (var j = 0; j < ContainerLength; j++) {
-            randomPizzaContainer[j].style.width = newwidth[j];
+            randomPizzaContainer[j].style.width = newwidth;
         }
     }
 
@@ -555,7 +555,9 @@ document.addEventListener('DOMContentLoaded', function() {
     //declare elem and moingPizzas outside to prevent calling again and again
     var elem;
     var movingPizzas = document.getElementById("movingPizzas1");
-    for (var i = 0; i < 50; i++) {
+	var rows=window.screen.height/s
+	var no_of_reqd_pizzas= rows*cols
+    for (var i = 0; i < no_of_reqd_pizzas; i++) {
         elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
