@@ -555,8 +555,8 @@ document.addEventListener('DOMContentLoaded', function() {
     //declare elem and moingPizzas outside to prevent calling again and again
     var elem;
     var movingPizzas = document.getElementById("movingPizzas1");
-	var rows=window.screen.height/s
-	var no_of_reqd_pizzas= rows*cols
+    var rows=window.screen.height/s;
+    var no_of_reqd_pizzas= rows*cols;
     for (var i = 0; i < no_of_reqd_pizzas; i++) {
         elem = document.createElement('img');
         elem.className = 'mover';
